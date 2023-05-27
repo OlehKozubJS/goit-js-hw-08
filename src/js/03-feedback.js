@@ -3,7 +3,6 @@ import throttle from "lodash.throttle";
 const feedbackForm = document.querySelector(".feedback-form");
 
 window.addEventListener("load", readMessage);
-feedbackForm.addEventListener("input", writeMessage);
 feedbackForm.addEventListener("input", throttle(writeMessage, 500));
 feedbackForm.addEventListener("submit", submitForm);
 
